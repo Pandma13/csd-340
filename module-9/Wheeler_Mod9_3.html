@@ -1,47 +1,76 @@
 <!DOCTYPE html>
 <!--Megan Wheeler
-Assignment 2.2-->
+Assignment 9.3-->
 <html lang="en">
 <head>
     <title>CSD 340 Development with HTML and CSS</title>
 	<meta name="description"
-	content="CSD 340 Assignment 2.2" />
+	content="CSD 340 Assignment 9.3" />
 	<meta name="keywords" 
-	content="CSD 340, Module 2, Assignment" />
+	content="CSD 340, Module 9, Assignment" />
 	<meta name="robots"
 	content="nofollow" />
-	<meta http-equiv="author"
+	<meta name="author"
 	content="Megan Wheeler" />
 	<link href="Wheeler_Mod2_2.css" type="text/css" rel="stylesheet" />
+	<script>
+		var firstVariableValue = "island";
+	</script>
+	<script>
+		var secondVariableValue = "space";
+	</script>
+	<script>
+		var thirdVariableValue = "homes";
+	</script>
+	<script>
+		var fourthVariableValue = "circle";
+	</script>
 </head>
 
 <body>
-<div id="container">
-<h1>Assignment 2.2 - Building a Web Page Exercise, Part 2</h1>
-<h2>Chapter 1: Introduction</h2>
-<p class="intro">I was born in the Offutt Air Force Base hospital located near Bellevue Nebraska.
-My parents did not have any other children.
-My father was an active member of the Air Force at the time.
-My mother was a preschool teacher at a local Montessori School.</p>
-<p>I grew up in Bellevue Nebraska and lived there for most of my life.
-We would visit my father's family in Michigan and my mother's family in Ireland.
-Other than trips to visit family, we did not visit many other places.</p>
-<p>I attended the Motessori school where my mother taught from 18 months old through 2nd grade.
-<span class="sentence">The school and class sizes were very small.</span>
-I ended up being very close to my classmates during my time at the school.
-I am still friends with some of them eventhough we are spread out across the country now.
-</p>
-<p>After 2nd grade, my father wanted me to attend public school.
-I attended the closest elementary school for 3rd grade.
-We moved and I had to change schools for 4th through 6th grade.
-</p>
-<hr/>
-<address>
-<p><a href="https://www.bellevue.edu/">Bellevue University</a></p>
-<p>1000 Galvin Road South</p>
-<p>Bellevue, NE 68005</p>
-</address>
-</div>
+	<p> Crannog: a poem by Moya Cannon </p>
+	<p> 
+		Where an ash bush grows in the lake
+		a ring of stones has broken cover
+		in this summer's drought.
+		Not high enough to be an <span id = "island">_________</span>,
+		it holds a disc of stiller water
+		in the riffled lake. 
+	</p>
+	<p> Trees have reclaimed the railway line behind us;
+		behind that, the road goes east-
+		as two lines parallel in <span id = "space">_________</span> and time run away from us
+		this discovered circle draws us in.
+		In drowned towns
+		bells toll only for sailors and for the credulous
+		but this necklace of wet stones,
+		remnant of a wattle Atlantis,
+		catches us all by the throat.
+	</p>
+	<p>
+		We don't know what beads or blades
+		are held in the bog lake's wet amber
+		but much of us longs to live in water
+		and we recognise this surfacing
+		of old <span id = "homes">_________</span> of love and hurt.
+	</p>
+	<p>
+		A troubled bit of us is kin
+		to people who drew a <span id = "circle">_________</span> in water,
+		loaded boats with stone,
+		and raised a dry island and a fort
+		with a whole lake for a moat.
+	</p>
+	<p>
+		<button type="button"
+            onclick="document.getElementById('island').innerHTML = firstVariableValue">island</button> <br />
+		<button type="button"
+		onclick="document.getElementById('space').innerHTML = secondVariableValue">space</button> <br />
+		<button type="button"
+		onclick="document.getElementById('homes').innerHTML = thirdVariableValue">homes</button> <br />
+		<button type="button"
+		onclick="document.getElementById('circle').innerHTML = fourthVariableValue">circle</button> <br />
+	</p>
 </body>
 
 </html>
