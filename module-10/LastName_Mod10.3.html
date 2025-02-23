@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--Megan Wheeler
+Assignment 10.3-->
+<html lang="en">
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+	<meta name="description"
+	content="CSD 340 Assignment 10.3">
+	<meta name="keywords" 
+	content="CSD 340, Module 10, Assignment">
+	<meta name="robots"
+	content="nofollow">
+	<meta name="author"
+	content="Megan Wheeler">
+    <script>
+        function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "400px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);        
+      }
+    </script>
+</head>
+<body>
+<h1>Assignment 10.3: JavaScript - Part 2</h1>
+<br>
+<div>
+  <a href=#
+     onmouseout="husky.src='https://placedog.net/400x200?id=139';"
+     onclick="husky.src='https://placedog.net/400x200?id=138';"
+  >
+    <img id = "husky" src = "https://placedog.net/400x200?id=139" 
+      alt = "Picture of a husky looking cute. When the user clicks on the image with 
+      their mouse, the picture changes to a husky looking goofy.">
+  </a>
+</div>
+<br>
+<div
+     onmouseover="this.style.color='blue';"
+     onmouseout= "this.style.color='black';">
+
+     Click the image to change it.
+  <br>
+
+</div>
+<div>
+  <a href=#
+     onmouseout="frenchie.src='https://placedog.net/400x200?id=242';"
+     onclick="frenchie.src='https://placedog.net/400x200?id=243';"
+  >
+    <img id = "frenchie" src = "https://placedog.net/400x200?id=242" alt = "Picture of 
+    a french bulldog looking curious. When the user clicks on the image with their 
+    mouse, the picture changes to a french bulldog looking grumpy.">
+  </a>
+</div>
+<br>
+<div
+     onmouseover="this.style.color='violet';"
+     onmouseout= "this.style.color='black';">
+
+  Click the image to change it.
+  <br>
+
+</div>
+</body>
+</html>
