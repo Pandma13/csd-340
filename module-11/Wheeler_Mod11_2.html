@@ -25,6 +25,7 @@ placement or size or color, feel free to be creative. -->
 			function addElement(){
 				const userInput = document.getElementById("textInput").value;
 				toDoList.push(userInput); //push user input to array
+				userInput.value = "";
 			}
 
 			function deleteElement() {
@@ -32,13 +33,18 @@ placement or size or color, feel free to be creative. -->
 			}
 
 			function displayList() {
-				document.getElementById("display").innerHTML = toDoList.toString(); //display array elements
+				document.write("<ul>");
+				for (var i = 0; i <= toDoList.length; ++i){ //display array elements
+					document.write("<li>" + toDoList[i] + "<li>"); 
+				}
+				document.write("</ul>");
 			}
 		</script>
 </head>
 <body>
     <h1>Assignment 11.2: JavaScript - Part 3</h1>
 
+	<p>INTRO MESSAGE</p>
 	<input type="text" id="textInput">
 	<button id="add" onclick="addElement()">Add</button>
 	<button id="delete" onclick="deleteElement()">Delete Last Entry</button>
