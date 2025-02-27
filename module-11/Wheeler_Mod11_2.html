@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Megan Wheeler
+Assignment 11.2
+
+For this assignment, you will be creating a To Do List. You won't need
+to create a separate JavaScript file, but you can if you like. You'll 
+need a text box, three buttons, and instructions for the user. You do 
+not need to follow the example in page design in terms of button 
+placement or size or color, feel free to be creative. -->
+
+<html lang="en">
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+	<meta name="description"
+	content="CSD 340 Assignment 11.2">
+	<meta name="keywords" 
+	content="CSD 340, Module 11, Assignment">
+	<meta name="robots"
+	content="nofollow">
+	<meta name="author"
+	content="Megan Wheeler">
+		<script>
+			const toDoList = [];
+
+			function addElement(){
+				const userInput = document.getElementById("textInput").value;
+				toDoList.push(userInput); //push user input to array
+			}
+
+			function deleteElement() {
+				
+			}
+
+			function displayList() {
+				document.getElementById("display").innerHTML = toDoList.toString(); //display array elements
+			}
+		</script>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+	<input type="text" id="textInput">
+	<button id="add" onclick="addElement()">Add</button>
+	<button id="delete" onclick="deleteElement()">Delete Last Entry</button>
+	<button id="display" onclick="displayList()">Display</button>
+</body>
+</html>
