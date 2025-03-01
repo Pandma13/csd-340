@@ -22,16 +22,21 @@ placement or size or color, feel free to be creative. -->
 		<script>
 			var toDoList = [];
 
-			// TO DO: Need check for empty userInput
 			function addElement() {
 				const textInput = document.getElementById("textInput");
-				const userInput = textInput.value;
-				//push user input to array
-				toDoList.push(userInput);
-				// display to user what as added to array
-				window.alert("Item: " + userInput + " was added as an item on the list.");
+				const userInput = textInput.value.trim();
 				// reset text box to empty
 				textInput.value = "";
+
+				// check for empty input
+				if (userInput == "") {
+					return;
+				}
+
+				// push input to array
+				toDoList.push(userInput);
+				// display to user what was added
+				window.alert("Item: " + userInput + " was added as an item on the list.");
 			}
 
 			function deleteLastElement() {
@@ -40,14 +45,15 @@ placement or size or color, feel free to be creative. -->
 			}
 
 			function displayList() {
+				// string to store added elements
 				let listInputString = "<ul>";
-				for (let i = 0; i < toDoList.length; i++) { //display array elements
-					// document.write("<li>" + toDoList[i] + "</li>"); 
+				// display array elements
+				for (let i = 0; i < toDoList.length; i++) {
+					// display array elements with starting with 1 not 0
 					listInputString += "<li>" + "Item " + (i + 1) + ": " + toDoList[i] + "</li>";
-					// console.log("Item " + (i + 1) + ": " + toDoList[i]);
 				}
 				listInputString += "</ul>";
-				// display array elements with numbering starting with 1 not 0
+				
 				document.getElementById("listDisplay").innerHTML = listInputString;
 			}
 		</script>
@@ -55,7 +61,11 @@ placement or size or color, feel free to be creative. -->
 <body>
     <h1>Assignment 11.2: JavaScript - Part 3</h1>
 
-	<p>INTRO MESSAGE</p>
+	<p>
+		This is an interactive To Do List. Type in your first item in the text box, the click Add.
+		Click the Display button to see the current items on the list. Click on Delete Last Entry
+		if you'd like to remove the last entry.
+	</p>
 
 	<input type="text" id="textInput">
 	<button id="add" onclick="addElement()">Add</button>
