@@ -23,14 +23,15 @@ placement or size or color, feel free to be creative. -->
 			var toDoList = [];
 
 			// TO DO: Need check for empty userInput
-			function addElement(){
-				const userInput = document.getElementById("textInput").value;
+			function addElement() {
+				const textInput = document.getElementById("textInput");
+				const userInput = textInput.value;
 				//push user input to array
 				toDoList.push(userInput);
 				// display to user what as added to array
 				window.alert("Item: " + userInput + " was added as an item on the list.");
 				// reset text box to empty
-				form.reset();
+				textInput.value = "";
 			}
 
 			function deleteLastElement() {
@@ -39,14 +40,15 @@ placement or size or color, feel free to be creative. -->
 			}
 
 			function displayList() {
-				document.write("<ul>");
-				for (let i = 0; i < toDoList.length; i++){ //display array elements
-					document.write("<li>" + toDoList[i] + "<li>"); 
-					document.write("<li>" + "Item " + (i + 1) + ": " + toDoList[i] + "</li>");
+				let listInputString = "<ul>";
+				for (let i = 0; i < toDoList.length; i++) { //display array elements
+					// document.write("<li>" + toDoList[i] + "</li>"); 
+					listInputString += "<li>" + "Item " + (i + 1) + ": " + toDoList[i] + "</li>";
 					// console.log("Item " + (i + 1) + ": " + toDoList[i]);
 				}
-				document.write("</ul>");
+				listInputString += "</ul>";
 				// display array elements with numbering starting with 1 not 0
+				document.getElementById("listDisplay").innerHTML = listInputString;
 			}
 		</script>
 </head>
@@ -55,11 +57,12 @@ placement or size or color, feel free to be creative. -->
 
 	<p>INTRO MESSAGE</p>
 
-	<form>
-		<input type="text" id="textInput">
-		<button id="add" onclick="addElement()">Add</button>
-		<button id="delete" onclick="deleteLastElement()">Delete Last Entry</button>
-		<button id="display" onclick="displayList()">Display</button>
-	</form>
+	<input type="text" id="textInput">
+	<button id="add" onclick="addElement()">Add</button>
+	<button id="delete" onclick="deleteLastElement()">Delete Last Entry</button>
+	<button id="display" onclick="displayList()">Display</button>
+
+	
+	<div id="listDisplay"></div>
 </body>
 </html>
