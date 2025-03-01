@@ -20,7 +20,7 @@ placement or size or color, feel free to be creative. -->
 	<meta name="author"
 	content="Megan Wheeler">
 		<script>
-			const toDoList = [];
+			var toDoList = [];
 
 			// TO DO: Need check for empty userInput
 			function addElement(){
@@ -39,13 +39,13 @@ placement or size or color, feel free to be creative. -->
 			}
 
 			function displayList() {
-				// document.write("<ul>");
+				document.write("<ul>");
 				for (let i = 0; i < toDoList.length; i++){ //display array elements
-					// document.write("<li>" + toDoList[i] + "<li>"); 
-					// document.write("<li>" + "Item " + (i + 1) + ": " + toDoList[i] + "</li>");
-					console.log("Item " + (i + 1) + ": " + toDoList[i]);
+					document.write("<li>" + toDoList[i] + "<li>"); 
+					document.write("<li>" + "Item " + (i + 1) + ": " + toDoList[i] + "</li>");
+					// console.log("Item " + (i + 1) + ": " + toDoList[i]);
 				}
-				// document.write("</ul>");
+				document.write("</ul>");
 				// display array elements with numbering starting with 1 not 0
 			}
 		</script>
