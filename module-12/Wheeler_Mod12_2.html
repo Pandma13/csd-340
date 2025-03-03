@@ -12,31 +12,27 @@ Assignment 3.3-->
 
     <script>
         // array of books
-        var bookList = ["The Giver", "The War of the Worlds", "1984", 
+        const bookList = ["The Giver", "The War of the Worlds", "1984", 
             "A Wrinkle in Time", "Wizard's First Rule", "The Redemption of Althalus",
             "The Chronicles of Chrestomanci", "The Girl with the Dragon Tattoo",
             "The Way of Shadows", "Guilty Pleasures"];
 
-        // display array elements in ascending order
-        function topToBottom () {
-            // Will changing <ol> to <div> work? Nope.
-            // adding <ol> to function removed undefined <li>
-            // changing string to empty and removing <ol> from beginning and end
-            let topToBottomList = "";
+        function updateBookList (bookList) {
+            let upList = "";
             for (let i = 0; i < bookList.length; i++) {
-                topToBottomList += "<li>" + bookList[i] + "</li>";
+                upList += "<li>" + bookList[i] + "</li>";
             }
 
-            document.getElementById("displayBookList").innerHTML = topToBottomList;
+            document.getElementById("displayBookList").innerHTML = upList;
+        }
+
+        // display array elements in ascending order
+        function topToBottom () {
+            updateBookList(bookList);
         }
         // display array elements in descending order
         function bottomToTop () {
-            let bottomToTopList = "";
-
-            for (let i = bookList.length - 1; i >= 0; i++) {
-                bottomToTopList += "<li>" + bookList[i] + "</li>";
-            }
-            document.getElementById("displayBookList").innerHTML = bottomToTopList;
+            updateBookList(bookList.toReversed());
         }
 
     </script>
@@ -52,17 +48,6 @@ Assignment 3.3-->
             <button id="Bottom" onclick="bottomToTop()">Bottom to Top</button>
 
             <div id="displayBookList"></div>
-
-            <!-- <li>The Giver</li>
-            <li>The War of the Worlds</li>
-            <li>1984</li>
-            <li>A Wrinkle in Time</li>
-            <li>Wizard's First Rule</li>
-            <li>The Redemption of Althalus</li>
-            <li>The Chronicles of Chrestomanci</li>
-            <li>The Girl with the Dragon Tattoo</li>
-            <li>The Way of Shadows</li>
-            <li>Guilty Pleasures</li> -->
         </ol>
     </div>
     <div class="column_right">
