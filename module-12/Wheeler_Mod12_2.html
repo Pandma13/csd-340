@@ -17,22 +17,23 @@ Assignment 3.3-->
             "The Chronicles of Chrestomanci", "The Girl with the Dragon Tattoo",
             "The Way of Shadows", "Guilty Pleasures"];
 
-        function updateBookList (bookList) {
-            let upList = "";
-            for (let i = 0; i < bookList.length; i++) {
-                upList += "<li>" + bookList[i] + "</li>";
-            }
+        const bookListKeys = [...bookList.keys()];
 
+        function updateBookList(keys) {
+            let upList = "";
+            for (const key of keys) {
+                upList += "<li>" + bookList[key] + "</li>";
+            }
             document.getElementById("displayBookList").innerHTML = upList;
         }
 
         // display array elements in ascending order
-        function topToBottom () {
-            updateBookList(bookList);
+        function topToBottom() {
+            updateBookList(bookListKeys);
         }
         // display array elements in descending order
-        function bottomToTop () {
-            updateBookList(bookList.toReversed());
+        function bottomToTop() {
+            updateBookList(bookListKeys.toReversed());
         }
 
     </script>
