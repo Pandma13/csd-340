@@ -18,7 +18,12 @@ Assignment 3.3-->
             "The Way of Shadows", "Guilty Pleasures"];
         // display array elements in ascending order
         function topToBottom () {
+            var topToBottomList;
+            for (let i = 0; i < bookList.length; i++) {
+                topToBottomList += "<li>" + bookList[i] + "</li>";
+            }
 
+            document.getElementById("displayBookList").innerHTML = topToBottomList;
         }
         // display array elements in descending order
         function bottomToTop () {
@@ -36,6 +41,9 @@ Assignment 3.3-->
         <h3>Top 10 Favorite Books</h3>
             <button id="Top" onclick="topToBottom()">Top to Bottom</button>
             <button id="Bottom" onclick="bottomToTop()">Bottom to Top</button>
+
+            <div id="displayBookList"></div>
+
             <li>The Giver</li>
             <li>The War of the Worlds</li>
             <li>1984</li>
