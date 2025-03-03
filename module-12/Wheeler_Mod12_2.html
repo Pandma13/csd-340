@@ -18,10 +18,11 @@ Assignment 3.3-->
             "The Way of Shadows", "Guilty Pleasures"];
         // display array elements in ascending order
         function topToBottom () {
-            var topToBottomList;
+            let topToBottomList = '<ol id="list_display">'; // adding id to list and css file
             for (let i = 0; i < bookList.length; i++) {
                 topToBottomList += "<li>" + bookList[i] + "</li>";
             }
+            topToBottomList += "</ol>";
 
             document.getElementById("displayBookList").innerHTML = topToBottomList;
         }
