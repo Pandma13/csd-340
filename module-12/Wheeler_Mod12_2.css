@@ -9,6 +9,12 @@ h1 {
     float: right;
     width: 45%;
 }
+/* Did not display formatting correctly
+.top_books {
+    border: 1px solid red;
+    border-radius: 15px;
+    font-weight: 300;
+} */
 ol {
     border: 1px solid red;
     border-radius: 15px;
