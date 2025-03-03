@@ -16,6 +16,7 @@ Assignment 3.3-->
             "A Wrinkle in Time", "Wizard's First Rule", "The Redemption of Althalus",
             "The Chronicles of Chrestomanci", "The Girl with the Dragon Tattoo",
             "The Way of Shadows", "Guilty Pleasures"];
+
         // display array elements in ascending order
         function topToBottom () {
             // Will changing <ol> to <div> work? Nope.
@@ -25,13 +26,17 @@ Assignment 3.3-->
             for (let i = 0; i < bookList.length; i++) {
                 topToBottomList += "<li>" + bookList[i] + "</li>";
             }
-            // topToBottomList += "</ol>";
 
             document.getElementById("displayBookList").innerHTML = topToBottomList;
         }
         // display array elements in descending order
         function bottomToTop () {
-            
+            let bottomToTopList = "";
+
+            for (let i = 10; bookList.length < i; i--) {
+                bottomToTopList += "<li>" + bookList[i] + "</li>";
+            }
+            document.getElementById("displayBookList").innerHTML = bottomToTopList;
         }
 
     </script>
