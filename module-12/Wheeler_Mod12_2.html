@@ -18,6 +18,8 @@ Assignment 3.3-->
             "The Way of Shadows", "Guilty Pleasures"];
         // display array elements in ascending order
         function topToBottom () {
+            // Will changing <ol> to <div> work?
+            // adding <ol> to function removed undefined <li>
             let topToBottomList = '<ol id="list_display">'; // adding id to list and css file
             for (let i = 0; i < bookList.length; i++) {
                 topToBottomList += "<li>" + bookList[i] + "</li>";

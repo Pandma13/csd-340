@@ -24,11 +24,12 @@ ul {
     list-style-position: outside;
     list-style-type: upper-roman;
 }
-.list_display {
+/* Did not fix issue: testing out adding ol to name */
+/* ol.list_display { 
     font-weight: 300;
     padding: 10px;
     list-style-position: outside;
-}
+} */
 h3 {
     font-weight: 500;
 }
