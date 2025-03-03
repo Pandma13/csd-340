@@ -33,7 +33,7 @@ Assignment 3.3-->
         function bottomToTop () {
             let bottomToTopList = "";
 
-            for (let i = 10; bookList.length < i; i--) {
+            for (let i = bookList.length - 1; i >= 0; i++) {
                 bottomToTopList += "<li>" + bookList[i] + "</li>";
             }
             document.getElementById("displayBookList").innerHTML = bottomToTopList;
