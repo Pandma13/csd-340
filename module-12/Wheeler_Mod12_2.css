@@ -1,28 +1,35 @@
 h1 {
     text-align: center;
 }
-.column_left {
-    float: left;
-    width: 45%;
-}
-.column_right {
-    float: right;
-    width: 45%;
+.displayContainer {
+    display: grid;
+    width: 100%;
+    column-gap: 4%;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
 }
 ol {
-    border: 1px solid red;
-    border-radius: 15px;
     font-weight: 300;
     padding: 10px;
     list-style-position: outside;
 }
-ul {
-    border: 1px dashed red;
+.bookStyle {
+    padding: 10px;
+    border: 1px solid red;
     border-radius: 15px;
+}
+ul {
     font-weight: 300;
     padding: 10px;
     list-style-position: outside;
     list-style-type: upper-roman;
+}
+.thingStyle {
+    padding: 10px;
+    border: 1px dashed red;
+    border-radius: 15px;
 }
 h3 {
     font-weight: 500;
