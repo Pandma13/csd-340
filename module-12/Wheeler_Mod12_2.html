@@ -19,21 +19,24 @@ Assignment 3.3-->
 
         const bookListKeys = [...bookList.keys()];
 
-        function updateBookList(keys) {
+        function updateBookList(keys, listClass) {
             let upList = "";
             for (const key of keys) {
                 upList += "<li>" + bookList[key] + "</li>";
             }
-            document.getElementById("displayBookList").innerHTML = upList;
+            displayBookList = document.getElementById("displayBookList");
+            displayBookList.className = listClass;
+            displayBookList.innerHTML = upList;
+            displayBookList.reversed = listClass == "reversed";
         }
 
         // display array elements in ascending order
         function topToBottom() {
-            updateBookList(bookListKeys);
+            updateBookList(bookListKeys, "ordered");
         }
         // display array elements in descending order
         function bottomToTop() {
-            updateBookList(bookListKeys.toReversed());
+            updateBookList(bookListKeys.toReversed(), "reversed");
         }
 
     </script>
@@ -43,13 +46,11 @@ Assignment 3.3-->
 <div id="container">
 <h1>Assignment 12.2: JavaScript - Part 4</h1>
     <div class="column_left">
-        <ol>
         <h3>Top 10 Favorite Books</h3>
             <button id="Top" onclick="topToBottom()">Top to Bottom</button>
             <button id="Bottom" onclick="bottomToTop()">Bottom to Top</button>
 
-            <div id="displayBookList"></div>
-        </ol>
+            <ol id="displayBookList"></ol>
     </div>
     <div class="column_right">
         <ul>

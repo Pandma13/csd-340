@@ -9,12 +9,6 @@ h1 {
     float: right;
     width: 45%;
 }
-/* Did not display formatting correctly
-.top_books {
-    border: 1px solid red;
-    border-radius: 15px;
-    font-weight: 300;
-} */
 ol {
     border: 1px solid red;
     border-radius: 15px;
@@ -30,12 +24,6 @@ ul {
     list-style-position: outside;
     list-style-type: upper-roman;
 }
-/* Did not fix issue: testing out adding ol to name */
-/* ol.list_display { 
-    font-weight: 300;
-    padding: 10px;
-    list-style-position: outside;
-} */
 h3 {
     font-weight: 500;
 }
